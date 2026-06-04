@@ -25,9 +25,10 @@ credentials = {
 }
 
 # Passwort-Hasher für den Authenticator initialisieren
-for username in credentials['usernames']:
-    credentials['usernames'][username]['password'] = stauth.Hasher([credentials['usernames'][username]['password']]).generate()[0]
-
+# --- SO IST ES RICHTIG FÜR VERSION 0.4.2 ---
+for username, user_info in credentials['usernames'].items():
+    # Der neue Hasher wird ohne Argumente instanziiert, danach hashen wir den String direkt
+    credentials['usernames'][username]['password'] = stauth.Hasher.hash(user_info['password'])
 authenticator = stauth.Authenticate(
     credentials,
     cookie_name="mindcalm_cookie",

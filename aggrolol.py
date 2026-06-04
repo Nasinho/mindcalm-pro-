@@ -47,7 +47,6 @@ if authentication_status is False:
     st.error("Username/Passwort falsch, Bro. Versuchs nochmal.")
 elif authentication_status is None:
     st.warning("Bitte logge dich ein, um MindCalm Pro zu nutzen.")
-    st.info("Demo-Zugang: `toenni` mit Passwort `123`")
 
 # --- WENN LOGGED IN, STARTET DIE APP ---
 elif authentication_status:
@@ -221,8 +220,6 @@ elif authentication_status:
             st.info("Noch keine gespeicherten Sitzungen in deinem Profil gefunden.")
 
     # --- SIDE CONTENT (SOFORTHILFE) ---
-    st.markdown("---")
-    st.markdown('<div class="glass-card glass-card-emergency">', unsafe_allow_html=True)
     st.write("### 🚨 Soforthilfe")
     if st.button("🔴 TIME-OUT JETZT", use_container_width=True):
         st.session_state.timeout_active = True

@@ -33,7 +33,15 @@ authenticator = stauth.Authenticate(
 )
 
 # --- LOGIN INTERFACE ---
-name, authentication_status, username = authenticator.login(location='main')
+# --- SO IST ES RICHTIG FÜR VERSION 0.4.2 ---
+# --- LOGIN INTERFACE ---
+# Die Methode braucht jetzt zwingend ein Label, gibt aber nichts mehr zurück
+authenticator.login(fields={'Form name': 'Login'})
+
+# Wir holen uns die Werte direkt aus dem Session State von Streamlit
+authentication_status = st.session_state.get("authentication_status")
+username = st.session_state.get("username")
+name = st.session_state.get("name")
 
 if authentication_status is False:
     st.error("Username/Passwort falsch, Bro. Versuchs nochmal.")

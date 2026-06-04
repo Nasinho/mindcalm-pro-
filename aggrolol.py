@@ -14,12 +14,8 @@ st.set_page_config(page_title="MindCalm Pro", page_icon="🌱", layout="wide")
 credentials = {
     "usernames": {
         "toenni": {
-            "name": "Töppi",
-            "password": "123" # Vergib hier dein Wunschpasswort
-        },
-        "gast": {
-            "name": "Gast-Nutzer",
-            "password": "456"
+            "name": "Melibär",
+            "password": "Aggrobär" # Vergib hier dein Wunschpasswort
         }
     }
 }

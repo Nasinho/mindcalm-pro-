@@ -113,7 +113,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- CONFIG & INITIALISIERUNG ---
-os.environ["GEMINI_API_KEY"] = "AQ.Ab8RN6KFBI2Yz_1hC-Mh_G7Zi-lRKnqUbOAhUaa-3QTqsSbmwA"
 
 SYSTEM_PROMPT = """
 Du bist Liko, ein empathischer, absolut ruhiger und deeskalierender KI-Coach für Aggressionsbewältigung. 

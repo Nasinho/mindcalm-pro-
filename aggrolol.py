@@ -13,7 +13,7 @@ st.set_page_config(page_title="MindCalm Pro", page_icon="🌱", layout="wide")
 # In der Praxis werden diese Passwörter als Hashes gespeichert.
 credentials = {
     "usernames": {
-        "toenni": {
+        "Melibär": {
             "name": "Melibär",
             "password": "Aggrobär" # Vergib hier dein Wunschpasswort
         }
